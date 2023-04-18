@@ -1,0 +1,141 @@
+<!-- <?php
+    session_start();
+    if(isset($_SESSION['MaNhanVien']) == false){
+        echo "<script>alert('Bạn phải đăng nhập trước khi sử dụng')
+        window.location.href ='../Login/HTML/index.php';
+        </script>";
+    }
+?> -->
+
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/logo-img/adidas.jpg" type="image/gif">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../mycss.css">
+    <link rel="stylesheet" href="./ThongKe/thongke.css">
+    <title>ADIDAS - ADMIN </title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="#" class="navar-branch">
+                <img src="../../logo-img/adidas.jpg" alt="logo" height="85px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link active">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./QuanLySanPham/HTML/index.html" class="nav-link">Quản Lý Sản Phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./QuanLyTaiKhoan/HTML/index.html" class="nav-link">Quản Lý Tài Khoản</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./QuanLyKhachHang/index.html" class="nav-link">Quản Lý Khách Hàng </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./QuanLyHoaDon/index.html" class="nav-link">Quản Lý Hóa Đơn </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./QuanLyNhanVien/HTML/index.html" class="nav-link">Quản Lý Nhân Viên </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./LichSu/index.html" class="nav-link">Lịch Sử </a>
+                    </li>
+                    <li class="">
+                        <a href="../Login/HTML/index.html" class="nav-link">Đăng xuất</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <h2 class="content">
+            <span>ADIDAS - ADMIN</span>
+        </h2>
+        <div id="search">
+            <button id="searchBtn">Tìm kiếm</button>
+            <input type="text" name="" id="searchValue" placeholder="Nhập vào năm cần tìm">
+
+        </div>
+        <h4 id="yearInfor" style="font-size: 2rem;color:#009879">Thống kê doanh thu năm : </h4>
+        <div id="graphDiv">
+            <div class="content-statistical">
+                <div id="content-graph">
+                    <div id="line_top_x"></div>
+                </div>
+                
+            </div>
+        </div>
+        <div id="content-number">
+            <div class="formStatistical" style="background-color:  #0392cf">
+                <img src="./GRAPH/icon/product_64px.png" alt="Hinh Anh">
+                <h1 id="numberProduct"></h1>
+                <h1>Sản Phẩm</h1>
+            </div>
+
+            <div class="formStatistical" style="background-color:  #fe4a49">
+                <img src="./GRAPH/icon/necklace_100px.png" alt="Hinh Anh">
+                <h1 id="numberDayChuyen"></h1>
+                <h1>Dây Chuyền</h1>
+            </div>
+
+            <div class="formStatistical" style="background-color:  #7bc043">
+                <img src="./GRAPH/icon/bracelet_60px.png" alt="Hinh Anh">
+                <h1 id="numberVongTay"></h1>
+                <h1>Vòng Tay</h1>
+            </div>
+
+            <div class="formStatistical" style="background-color:  #f37736">
+                <img src="./GRAPH/icon/ring_side_view_64px.png" alt="Hinh Anh">
+                <h1 id="numberNhan"></h1>
+                <h1>Nhẫn</h1>
+            </div>
+
+            <div class="formStatistical" style="background-color: #35a79c">
+                <img src="./GRAPH/icon/earrings_96px.png" alt="Hinh Anh">
+                <h1 id="numberKhuyenTai"></h1>
+                <h1>Khuyên Tai</h1>
+            </div>
+
+            <div class="formStatistical" style="background-color: #3b7dd8;">
+                <img src="./GRAPH/icon/account_96px.png" alt="Hinh Anh">
+                <h1 id="numCustomer"></h1>
+                <h1>Khách Hàng</h1>
+            </div>
+            <div class="formStatistical" style="background-color: #c68642;">
+                <img src="./GRAPH/icon/customer_100px.png" alt="Hinh Anh">
+                <h1 id="numAccount"></h1>
+                <h1>Tài Khoản</h1>
+            </div>
+            <div class="formStatistical">
+                <img src="./GRAPH/icon/bill_60px.png" alt="Hinh Anh">
+                <h1 id="numBill"></h1>
+                <h1>Hóa Đơn</h1>
+            </div>
+            <div class="formStatistical" style="background-color:#fe9c8f ;">
+                <img src="./GRAPH/icon/buying_60px.png" alt="Hinh Anh">
+                <h1 id="buyProduct"></h1>
+                <h1>Sản phẩm đã bán ra</h1>
+            </div>
+        </div>
+
+    </div>
+    <!-- <script src="../../jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="./GRAPH/linear.js"></script> -->
+    
+</body>

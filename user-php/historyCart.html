@@ -1,0 +1,159 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../logo-img/adidas.jpg" type="image/gif">
+    <link rel="stylesheet" href="../mycss.css">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Cửa hàng giày thể thao</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navar-branch" style="cursor: pointer;" href="../index.php">
+                <img src="../logo-img/adidas.jpg" alt="logo" height="85px">
+            </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav mx-auto " id="lsp">
+                <li class="nav-item">
+                    <a class="nav-link active" style="cursor: pointer;" href="../index.php">TRANG CHỦ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="cursor: pointer;" href="giaynam.html">GIÀY NAM</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="cursor: pointer;" href="">GIÀY NỮ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="cursor: pointer;" href="">GIÀY TRẺ EM</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="cursor: pointer;" href="">PHỤ KIỆN</a>
+                </li>
+            </ul>
+        </div>
+        <div class = "user-name">
+            <h4>Name</h4>
+        </div>
+           <div class="user-nav">
+                <div class="dropdown-user">
+                    <i class="fa fa-user"></i><i class="fa fa-angle-down"></i>
+                    <div class="dropdown-user-content">
+                        <a href="./historyCart.html">Lịch sử</a>
+                        <a href="./login.html">Đăng nhập</a>
+                        <a href="./register.html">Đăng ký</a>
+                        <a href="./changepassword.html">Đổi mật khẩu</a>
+                        <a href="">Đăng xuất</a>
+                    </div>
+                </div>
+                <a href="../user-php/shopping-cart.php" style="cursor: pointer;"><i class="fa fa-shopping-cart"></i></a>
+                <span id="counter">
+                    
+                </span>
+            </div>
+    </nav><br>
+    
+    <!-- BODY-CONTENT -->
+    <div>
+            <table id="view_account" class="styled-table">
+                <thead style="background-color: cornflowerblue;">
+                    <tr>
+                        <th style ="text-align: center; width : 4rem;">Mã Hóa Đơn</th>
+                        <th style ="text-align: center;width : 6rem;">Tên Khách Hàng</th>
+                        <th style ="text-align: center;width : 5rem;">Ngày Lập</th>
+                        <th style ="text-align: center;width : 4rem;">Giờ Lập</th>
+                        <th style ="text-align: center;width : 6rem;">Trạng thái</th>
+                        <th style ="text-align: center;width : 4rem;">Chi Tiết</th>
+                    </tr>
+                </thead>
+            <tbody>
+                <tr>
+                    <td style ="text-align: center;" >1</td>
+                    <td style ="text-align: center;">Võ Anh Khoa</td>
+                    <td style ="text-align: center;">2021-10-12</td>     
+                    <td style ="text-align: center;">01:15:00</td>
+                    <td style ="text-align: center;">Chờ xác nhận</td>
+                    <td><button onclick="viewDetail">Xem Chi Tiết</button></td>
+                </tr>
+            </tbody>
+            
+           </table>
+        
+    </div>
+
+    <!--footer------------------------------------------------------->
+    <div class="flex-container">
+        <div class="flex1"><i class="fa fa-plane" style="font-size:35px;float: left; padding: 0 8px;"></i>
+            <p>GIAO HÀNG TẬN NƠI TRÊN TOÀN QUỐC</p>
+        </div>
+        <div class="flex1"><i class="fa fa-calendar" style="font-size:35px;float: left; padding: 0 8px;"></i>
+            <p>ĐỔI TRẢ TRONG VÒNG 07 NGÀY </p>
+        </div>
+        <div class="flex1"><i class="fa fa-thumbs-up" style="font-size:35px;float: left; padding: 0 8px;"></i>
+            <p>CAM KẾT CHẤT LƯỢNG SẢN PHẨM</p>
+        </div>
+        <div class="flex1"><i class="fa fa-lock" style="font-size:35px;float: left; padding: 0 8px;"></i>
+            <p>BẢO MẬT THÔNG TIN KHÁCH HÀNG</p>
+        </div>
+    </div>
+    <div class="flex-container2">
+        <div class="flex5">ADIDAS là một thương hiệu giày <br>
+            Đã - Đang - Sẽ và Luôn mang tới cho mọi người những sản phẩm Độc - Chất - Giá tốt nhất trên thị trường.</div>
+        <div class="flex6">
+            <strong> CHĂM SÓC KHÁCH HÀNG</strong>
+            <a href="#">LIÊN HỆ</a>
+            <a href="#">HƯỚNG DẪN THANH TOÁN</a>
+            <a href="#">GIAO HÀNG</a>
+            <a href="#">CHÍNH SÁCH BẢO HÀNH</a>
+            <a href="#">CHÍNH SÁCH ĐỔI TRẢ</a>
+        </div>
+        <div class="flex7">
+            <strong style="font-size: 20px;">Địa chỉ cửa hàng ADIDAS</strong>
+            <h6> 7, đường: Hai Bà Trưng, Q.1, TP.HCM</h6>
+            <h6>135, đường: Trần Phú, Q.Hà Đông, TP.Hà Nội</h6>
+            <h6>44, đường: Ngô Đức Kế, Q.Ninh Kiều, TP.Cần Thơ</h6>
+            <P>2, Ông Ích Khiêm, Thanh Bình, Hải Châu, TP.Đà Nẵng</P>
+        </div>
+        <div class="flex8">
+            <strong style="font-size: 20px;">ĐĂNG KÝ NHẬN TIN</strong><br>
+            <input type="email" placeholder="Nhập email của bạn..">
+            <input type="button" value="Gửi">
+        </div>
+    </div>
+    <!--Page up btn------------------------------------------------------->
+    <button onclick="topFunction()" id="myBtn"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+    <script src="../main-js.js"></script>
+</body>
+
+</html>
+
+
+<!-- <div class="background" id="formDetailBill">
+    <div class="defaultForm" style="padding-bottom: 2rem;">
+        <p>Mã hóa đơn</p>
+        <p>Tên Khách Hàng</p>
+        <p>Ngày Lập</p>
+        <p>Giờ Lập</p>
+
+        <div class="detailBillContent">
+            <div class="detailBillSubContent">
+                <img src="" alt="" srcset="">
+                <h5>Tên Sản Phẩm</h5>
+                <h5 style="float: left;margin-left: 0;">Số Lượng</h5>
+                <h5 style="float: left;margin-left: 0;">Giá</h5>
+                <h5>% Giảm</h5>
+                <h5 style="color: red;">Thành Tiền</h5>
+            </div>
+        </div>
+        <h3>Tổng Tiền :</h3>
+    </div>
+    <button class="designbtn" id="closeBtnDetailForm" onclick="closeDetailForm();">Đóng</button>
+</div> -->

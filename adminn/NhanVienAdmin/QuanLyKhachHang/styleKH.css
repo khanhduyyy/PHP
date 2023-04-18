@@ -1,0 +1,22 @@
+#subSearchForm table,input,select{
+    width: 90%;
+    margin-left: 5%;
+}
+
+#subSearchForm{
+    margin-top: 5%;
+}
+
+#cancelSearch{
+    background-color: rgb(243, 73, 73);
+    color: white;
+}
+
+#searchBtn{
+    background-color: #009879;
+    color: white;
+}
+
+#searchForm{
+    display: none;
+}

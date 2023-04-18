@@ -1,0 +1,333 @@
+<!-- <?php
+    session_start();
+    if(isset($_SESSION['MaNhanVien']) == false){
+        echo "<script>alert('Bạn phải đăng nhập trước khi sử dụng')
+        window.location.href ='../../../Login/HTML/index.php';
+        </script>";
+    }
+?> -->
+
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/logo-img/adidas.jpg" type="image/gif">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../../mycss.css">
+    <link rel="stylesheet" href="../../../CSS/default.css">
+    <link rel="stylesheet" href="../../../CSS/tablestyle.css">
+    <link rel="stylesheet" href="../CSS/mystyle.css">
+    <title>ADIDAS - ADMIN </title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="#" class="navar-branch">
+                <img src="../../../../logo-img/adidas.jpg" alt="logo" height="85px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="../../index.html" class="nav-link active">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">Quản Lý Sản Phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../QuanLyTaiKhoan/HTML/index.html" class="nav-link">Quản Lý Tài Khoản</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../QuanLyKhachHang/index.html" class="nav-link">Quản Lý Khách Hàng </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../QuanLyHoaDon/index.html" class="nav-link">Quản Lý Hóa Đơn </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../QuanLyNhanVien/HTML/index.html" class="nav-link">Quản Lý Nhân Viên </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../LichSu/index.html" class="nav-link">Lich Sử </a>
+                    </li>
+                    <li class="">
+                        <a href="../../../Login/HTML/index.html" class="nav-link">Đăng xuất</a>
+                    </li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+        <h2 class="content">
+            <span>ADIDAS - ADMIN - SẢN PHẨM</span>
+        </h2>
+        <p class="testid"></p>
+        <div class="control">
+            <p id="addBtn"><img src="../../../icon/Add.png" alt="Thêm" srcset="">Cập nhật SP</p>
+            <p id="editBtn"><img src="../../../icon/edit_52px.png" alt="Sửa" srcset="">Sửa Sản Phẩm</p>
+            <p id="deleteBtn"><img src="../../../icon/delete_60px.png" alt="Xóa" srcset="">Xóa Sản Phẩm</p>
+            <p id="searchNumberBtn"><img src="../../../icon/search_48px.png" alt="UpdateSL" srcset="">Tìm kiếm</p>
+        </div>
+
+        <!-- Load table -->
+        <div id="tablecontent">
+                    
+        </div>
+
+    <!-- THÊM SẢN PHẨM -->
+
+    <div id="addProduceBackground" class="background">
+        <div id="add_Product" class="defaultForm">
+            <h3 class="titleAddProduct">THÊM SẢN PHẨM</h3>
+            <table class="defaultTable">
+                <tr>
+                    <td class="add-product-head">Chức năng</td>
+                    <td>
+                        <select name="" id="selectChoise">
+                            <option value="0">[Chọn chức năng cần dùng]</option>
+                            <option value="1">Thêm sản phẩm mới</option>
+                            <option value="2">Cập nhật Số lượng cho sản phẩm</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class = "addNewProduct">
+                    <td class="add-product-head">Tên sản phẩm</td>
+                    <td>
+                        <input type="text" id="nameProductAdd">
+                    </td>
+                </tr>
+                <tr class = "addNewProduct">
+                    <td class="add-product-head">Hình ảnh</td>
+                    <td>
+                        <input type="file" name="hinhanhsanphamadd" id="imageProductAdd">
+                    </td>
+                </tr>
+                <tr class = "addNewProduct">
+                    <td class="add-product-head">Mô tả chất liệu</td>
+                    <td>
+                        <textarea id="materialProductAdd"></textarea>
+                    </td>
+                </tr>
+                <tr class = "addNewProduct">
+                    <td class="add-product-head">Màu :</td>
+                    <td>
+                        <input type="text" name="mausanphamadd" id="colorProductAdd">
+                    </td>
+                </tr>
+                <tr class = "addNewProduct">
+                    <td class="add-product-head">Giá</td>
+                    <td>
+                        <input type="text" id="priceProductAdd">
+                    </td>
+                </tr>
+                <tr class = "addNewProduct">
+                    <td class="add-product-head">Loại</td>
+                    <td>
+                        <select name="loai" id="typeProductAdd">
+                            <option value="0">[Lựa chọn loại]</option>
+                            <option value="2">GIÀY NAM</option>
+                            <option value="1">GIÀY NỮ</option>
+                            <option value="4">GIÀY TRẺ EM</option>
+                            <option value="3">PHỤ KIỆN</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class = "addNewProduct">
+                    <td class="add-product-head">Số lượng</td>
+                    <td>
+                        <input type="text" id="numberProductAdd">
+                    </td>
+                </tr>
+                <tr class = "addNewProduct">
+                    <td class="add-product-head">% Giảm</td>
+                    <td>
+                        <input type="text" id="decreasePrice" value="0">
+                    </td>
+                </tr>
+                <tr class = "addNewNumberProduct">
+                    <td class="add-product-head">Chọn sản phẩm cần thêm :</td>
+                    <td>
+                        <select name="" id="typeOfProductAddNumber">
+                            <option value="0">[Lựa chọn sản phẩm]</option>
+
+                        </select>
+                    </td>
+                </tr>
+                <tr class = "addNewNumberProduct">
+                    <td class="add-product-head">Số lượng cần thêm :</td>
+                    <td>
+                        <input type="text" id="numberAddProduct">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="add-product-head">Thông báo</td>
+                    <td id="errorMessage"></td>
+
+                </tr>
+            </table>
+            <button id="exitBtnAdd" class="designbtn">Thoát</button>
+            <button id="addBtnAdd" class="designbtn">Thêm sản phẩm</button>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- SỬA SẢN PHẨM -->
+    <div id="editProduceBackground" class="background">
+        <div id="edit-productSP" class="defaultForm">
+            <h3 class="titleAddProduct"> Sửa thông tin trang sức : </h3>
+            <table border="1" class="defaultTable">
+                <tr>
+                    <td class="add-product-head">Chọn trang sức cần sửa</td>
+                    <td>
+                        <select id="nameIdProductEdit">
+                            <option value="0">[Lựa chọn sản phẩm]</option>
+                            <?php
+                                
+                                $result = getResultSQL('select * from trangsuc');
+                                $data = getData($result);
+                                foreach($data as $value){
+                                    echo '<option value="'.$value['MaTrangSuc'].'">'.$value['MaTrangSuc'].' - '.$value['TenTrangSuc'].'</option>';
+                                }
+                            ?>
+
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="add-product-head">Tên trang sức :</td>
+                    <td><input type="text" id="nameProductEdit"></td>
+                </tr>
+                <tr>
+                    <td class="add-product-head">Loại :</td>
+                    <td>
+                        <select id="typeProductEdit">
+                            <option value="1">Dây chuyền</option>
+                            <option value="2">Vòng tay</option>
+                            <option value="3">Nhẫn</option>
+                            <option value="4">Khuyên tai</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="add-product-head">Chất liệu :</td>
+                    <td><textarea id="materialProductEdit"></textarea></td>
+                </tr>
+                <tr>
+                    <td class="add-product-head">Màu :</td>
+                    <td><input type="text" id="colorProductEdit"></td>
+                </tr>
+                <tr>
+                    <td class="add-product-head">Giá :</td>
+                    <td><input type="text" id="priceProductEdit"></td>
+                </tr>
+                <tr>
+                    <td class="add-product-head">Hình ảnh :</td>
+                    <td>
+                        <p>Để thay đổi hình ảnh nhấn vào Browse...</p>
+                        <input type="file" id="imageProductEdit">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="add-product-head">% Giảm Giá</td>
+                    <td>
+                        <input type="text" name="" id="decreasePriceEdit">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="add-product-head">Thông báo</td>
+                    <td id="errorMessageEdit"></td>
+                </tr>
+            </table>
+            <button class="designbtn" id="exitBtnEdit">Thoát</button>
+            <button class="designbtn" id="updateBtnEdit">Cập nhật</button>
+            <button class="designbtn" id="preventBtnEdit">Khôi phục</button>
+        </div>
+
+    </div>
+
+
+
+    <!-- XÓA SẢN PHẨM -->
+
+    <div id="deleteProduct" class="background">
+        <div id="backgroundDeleteProduct" class="defaultForm">
+            <table border="1">
+                <tr>
+                    <td class="add-product-head">Chọn sản phẩm cần Xóa :</td>
+                    <td>
+                        <select name="" id="loaitrangsucdelete">
+                            <option value="0">[Lựa chọn sản phẩm]</option>
+                            <?php
+                                
+                                $result = getResultSQL('select * from trangsuc');
+                                $data = getData($result);
+                                foreach($data as $value){
+                                    echo '<option value="'.$value['MaTrangSuc'].'">'.$value['MaTrangSuc'].' - '.$value['TenTrangSuc'].'</option>';
+                                }
+                            ?>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="add-product-head">Thông báo</td>
+                    <td id="errorMessageDelete"></td>
+                </tr>
+            </table>
+            <div style="width:100%;">
+                <button class="designbtn" id="cancelBtnDelete">Hủy bỏ</button>
+                <button class="designbtn" id="donebtnUpdateDelete">Xóa</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================= TÌM KIẾM SẢN PHẨM ======================= -->
+    <div class="background" id="searchForm">
+        <div class="defaultForm" style="padding-bottom: 2rem;">
+            <div class="searchContent">
+                <p>Tìm theo :</p>
+
+                <select name="" id="choiseSearch">
+                    <option value="0">[Lựa chọn]</option>
+                    <option value="1">Tìm kiếm theo loại</option>
+                    <option value="2">Tìm kiếm theo tên</option>
+                </select>
+
+            </div>
+            <div class="searchContent" id="typeOfProductSearch">
+                <p>Chọn loại sản phẩm</p>
+                <select name="" id="typeOfSearch">
+                    <option value="0">[Lựa chọn loại]</option>
+                    <option value="1">Dây Chuyền</option>
+                    <option value="2">Vòng Tay</option>
+                    <option value="3">Nhẫn</option>
+                    <option value="4">Khuyên Tai</option>
+                </select>
+            </div>
+            <div class="searchContent" id="nameProductSearch">
+                <p>Nhập tên sản phẩm</p>
+                <input type="text" id="nameSearch">
+            </div>
+
+
+            <button class="designbtn" id="cancelSearch">Hủy bỏ</button>
+            <button class="designbtn" id="searchBtn">Tìm kiếm</button>
+        </div>
+    </div>
+
+    
+
+
+
+
+    <script src="../../../../jquery-3.6.0.js"></script>
+    <script src="../JS/myjs.js"></script>
+</body>

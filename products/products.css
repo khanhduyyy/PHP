@@ -1,0 +1,60 @@
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  height: auto;
+}
+
+.stepper {
+  border: 1px solid #eee;
+  display: inline-block;
+  overflow: visible;
+  height: 2.1em;
+  background: #fff;
+  padding: 1px;
+}
+
+.stepper input {
+  width: 3em;
+  height: 100%;
+  text-align: center;
+  border: 0;
+  background: transparent;
+  color: #000;
+}
+
+.stepper button {
+  width: 1.4em;
+  font-weight: 300;
+  height: 100%;
+  line-height: 0.1em;
+  font-size: 1.4em;
+  padding: 0.2em !important;
+  background: #eee;
+  color: #333;
+  border: none;
+}
+
+/* Box size*/
+.swatch-element{
+    padding: 5px 5px;
+    margin-bottom: 25px;
+    display: inline-block;
+    width: auto;
+    height: 50px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    color: #000;
+    font-size: 30px;
+}
+.none{
+  background-color: rgb(94, 161, 223);
+  margin-right: 11px;
+}
+/* title-product */
+h2{
+  color: red;
+}
+.title-adidas{
+  margin: 0;
+} 

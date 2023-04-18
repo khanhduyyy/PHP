@@ -1,0 +1,12 @@
+$(document).ready(function()
+{
+    //LoadTable
+    $.ajax({
+        url:"./loadTable.php",
+        type:"POST",
+        datatype:"html",
+        success:function(data){
+            $("#tableContent").html(data);
+        }
+    });
+});
